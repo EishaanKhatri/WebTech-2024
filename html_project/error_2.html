@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            background-color: #004080; 
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: "Arial Black", sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+            align-items: center;
+            height: 100%; 
+          }
+          
+          .error-num {
+            font-size: 8em;
+          }
+          
+          .eye {
+            background: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            height: 6em;
+            position: relative;
+            width: 6em;
+          }
+          .eye::after {
+            background: #000;
+            border-radius: 50%;
+            bottom: 56.1px;
+            content: "";
+            height: 33px;
+            position: absolute;
+            right: 33px;
+            width: 33px;
+          }
+          
+          p {
+            margin-bottom: 2em;
+            font-size: 1.2em; 
+          }
+          #go-back {
+            position: relative;
+            top: 2.5em;
+          }
+          a {
+            color: #ffcc00; 
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+          a:hover {
+            color: #ffe066; /
+          }
+
+          @media only screen and (max-width: 600px) {
+            .error-num {
+              font-size: 4em;
+            }
+
+            p {
+              margin-bottom: 1em;
+            }
+
+            #go-back {
+              top: 0.5em;
+            }
+          }
+
+          @media only screen and (min-width: 601px) and (max-width: 768px) {
+            .error-num {
+              font-size: 6em;
+            }
+
+            p {
+              margin-bottom: 1.5em;
+            }
+
+            #go-back {
+              top: 0.8em;
+            }
+          }
+
+          @media only screen and (min-width: 769px) and (max-width: 1024px) {
+            .error-num {
+              font-size: 7em;
+            }
+
+            p {
+              margin-bottom: 1.8em;
+            }
+
+            #go-back {
+              top: 1em;
+            }
+          }        
+    </style>
+</head>
+<body>
+    <div>
+        <span class='error-num'>Page being</span>
+        <br>
+        <span class='error-num'>G</span>
+        <div class='eye'></div>
+        
+        <div class='eye'></div>
+        <span class='error-num'>f</span>
+        <span class='error-num'>Y</span>
+
+        <p class='sub-text'>Oh eyeballs! Something went wrong. We're <i>looking</i> to see what happened.</p>
+        <div id="go-back"><a href='index.html'>Go back</a></div> 
+
+        <script>
+            $(document).ready(function() {
+                $('body').mousemove(function(event) {
+                    var e = $('.eye');
+                    var x = (e.offset().left) + (e.width() / 2);
+                    var y = (e.offset().top) + (e.height() / 2);
+                    var rad = Math.atan2(event.pageX - x, event.pageY - y);
+                    var rot = (rad * (180 / Math.PI) * -1) + 180;
+                    e.css({
+                      '-webkit-transform': 'rotate(' + rot + 'deg)',
+                      'transform': 'rotate(' + rot + 'deg)'
+                    });
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
