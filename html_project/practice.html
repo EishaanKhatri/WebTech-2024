@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Access Counter</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton" type = “button”>Click to
+        check this</button>
+        <script>
+        // In the global scope (outside any functions):
+        console.log(this); // Output: Window { ... }
+        // When a button is clicked:
+        document.getElementById("myButton").addEve
+        ntListener("click", function() {
+         console.log(this); // Output: Window { ... } (stillrefers to the global object)
+        });
+        </script>
+</body>
+</html>

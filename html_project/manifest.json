@@ -1,0 +1,16 @@
+{
+    "name": "Rajiv Gandhi Institute of Petroleum Institute",
+    "short_name": "RGIPT",
+    "icons": [
+      {
+        "src": "rgipt_logopng.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "theme_color": "#007bff",
+    "background_color": "#ffffff"
+  }
+  

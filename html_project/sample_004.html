@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        main {
+            position: relative;
+            justify-content: space-between;
+            padding: 20px;
+        }
+		section{
+			display: flex;
+			width: 60%;
+			flex-wrap: wrap;
+		}
+        article {
+            flex: 2;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-right: 20px;
+        }
+
+        aside {
+            background-color: #f0f0f0;
+            padding: 20px;
+            position: fixed;
+            right: 0;
+            top: 300px;
+            height: 60%;
+			width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+
+    <main>
+		<section>
+			<article>
+				<h2>Article Section</h2>
+				<p>This is the main content of the article section.</p>
+			</article>
+			<article>
+				<h2>Article Section</h2>
+				<p>This is the main content of the article section.</p>
+			</article>
+			<article>
+				<h2>Article Section</h2>
+				<p>This is the main content of the article section.</p>
+			</article>
+			<article>
+				<h2>Article Section</h2>
+				<p>This is the main content of the article section.</p>
+			</article><article>
+				<h2>Article Section</h2>
+				<p>This is the main content of the article section.</p>
+			</article>
+		</section>
+        <aside>
+            <h2>Aside Section</h2>
+            <p>This is the content of the aside section.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

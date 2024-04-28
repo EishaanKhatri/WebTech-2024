@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+  }
+  
+  .welcome-text {
+    margin-right: 120px; /* Adjust spacing between text and hand */
+    font-size: larger;
+  }
+  
+  .hand {
+    width: 100px;
+    height: 100px;
+    background-image: url('wavinghandpng.png'); /* Replace 'hand.png' with your image */
+    background-size: contain;
+    animation: wave 1s infinite alternate;
+  }
+  
+  .info-text {
+    text-align: center;
+    font-size:x-large;
+    width: 48%;
+    margin-top: 22px;
+    margin-bottom: 10vh;
+  }
+  .info-text p:last-child{
+    text-align: justify;
+  }
+  .home_link{
+    text-align: center;
+    font-size: x-large;
+    margin-top: -70px;
+  }
+  .animated-text {
+    animation: text-animation 4s infinite;
+    opacity: 0;
+  }
+  
+  @keyframes wave {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(20deg); }
+  }
+  
+  
+  

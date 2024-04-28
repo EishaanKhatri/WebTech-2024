@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGIPT</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .container-nav1,
+    .container-nav2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .college-name {
+        flex-grow: 1;
+        margin-left: 2rem;
+    }
+
+    nav#sticky-nav {
+        background-color: #003399;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    ul li {
+        list-style: none;
+        display: inline;
+    }
+
+    .left-section {
+        align-items: center;
+        justify-content: center;
+        height: 5vh;
+    }
+
+    .left-section a,
+    .center-section li a {
+        color: #fff;
+        padding: 0.5rem 1rem;
+    }
+
+    .center-section li:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    .slide:first-child {
+        opacity: 1;
+    }
+
+    .slider-nav {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+    }
+
+    .slider-nav button {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .slider-nav button:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    </style>
+</head>
+<body>
+    <header id="main-nav">
+        <div class="container-nav1">
+            <div class="logo">
+                <img src="Logo-RGIPT.png" alt="RGIPT Logo">
+            </div>
+            <nav class="college-name">
+                <h1>Rajiv Gandhi Institute of Petroleum Technology (RGIPT)</h1>
+            </nav>
+        </div>
+    </header>
+    <nav id="sticky-nav">
+        <div class="container-nav2">
+            <div class="left-section">
+                <a href="#">Jugaad Bytes</a>
+            </div>
+            <div class="center-section">
+                <ul id="nav-2-tabs">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Academia</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Top Scores</a></li>
+                    <li><a href="#">Forum</a></li>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugaad Bytes</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="rgipt_logopng.png" alt="College Logo">
+                <h1>Rajiv Gandhi Institute of Petroleum Technology</h1>
+            </div>
+        </div>
+    </header>
+    <header id="header2">
+        <div class="container">
+            <nav>
+                
+                <ul>
+                    <li><p>Jugaad Bytes</p></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-signup">
+                <form class="search-form">
+                    <input type="text" placeholder="Search">
+                </form>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="iframeDiv">
+        <h1 style="margin-left: 20px;">Quizes</h1>
+        <iframe src="sample_005.html" iframetag></iframe>
+        <h1 style="margin-left: 20px;">Games</h1>
+        <iframe src="sample_006.html" iframetag></iframe>
+    </div>
+
+    <!-- Other sections can be added here -->
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2024 Your College Name. All rights reserved.</p>
+            <p>Contact us at: <a href="mailto:info@yourcollege.com">info@yourcollege.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+      </script>
+</body>
+</html>

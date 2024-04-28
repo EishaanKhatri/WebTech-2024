@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Jugaad Bytes</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0079e3, #9d00db 60%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background 0.5s ease;
+        }
+
+        .box-form {
+            width: 70%;
+            height: min-content;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .left{
+            width: 55%;
+        }
+        .right {
+            width: 45%;
+        }
+
+        .left {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("background.jpg");
+            position: relative;
+            overflow: hidden;
+            min-height: 400px; /* Adjust as needed */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .overlay h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .overlay p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .right {
+            padding: 30px; /* Adjust as needed */
+            padding-right: 10px;
+            padding-top: 0px;
+            
+        }
+
+        .right h5 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .inputs label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #333; /* Adjust color as needed */
+        }
+
+        .inputs input {
+            width: 80%;
+            padding: 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background: #f4f4f4;
+        }
+
+        .inputs input::placeholder {
+            color: #666;
+        }
+
+        .remember-me--forget-password {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-right: 50px;
+        }
+
+        .remember-me--forget-password p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .remember-me--forget-password p:hover {
+            color: #ff6f61;
+        }
+
+        .remember-me--forget-password .text-checkbox {
+            display: inline-block;
+            height: auto;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s linear;
+        }
+
+        .remember-me--forget-password input {
+            margin: 0;
+            margin-right: 12px;
+            width: auto;
+        }
+
+        button {
+            color: #fff;
+            font-size: 16px;
+            padding: 15px;
+            border-radius: 5px;
+            display: inline-block;
+            border: 0;
+            outline: 0;
+            margin-top: 4px;
+            background: linear-gradient(135deg, #0079e3, #9d00db);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #9d00db, #0079e3);
+            transform: scale(1.05);
+        }
+        .signup-link {
+            display: inline-block;
+            color: black; /* Set text color to black */
+            margin-top: 20px; /* Adjust vertical spacing */
+        }
+        
+
+        /* Media Queries for Responsive Design */
+        @media only screen and (max-width: 768px) {
+            .box-form {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .left {
+                min-height: 200px; /* Adjust as needed */
+            }
+
+            .overlay {
+                padding: 10px;
+            }
+
+            .right {
+                padding: 10px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .box-form {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-form">
+        <div class="left">
+            <div class="overlay">
+                <h1>Jugaad Bytes</h1>
+                <p>Welcome to Jugaad Bytes, your own personal online platform to engage and learn at RGIPT.</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <h5 style="color: hsla(233, 100%, 10%, 0.84);">Login</h5>
+            <div class="inputs">
+                <label for="username">Username / Email-ID</label>
+                <input type="text" id="username" placeholder="Enter your username or email">
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+
+            <div class="remember-me--forget-password">
+                <p class="remember-me--forget-password">
+                    <input type="checkbox" name="remember" checked />
+                    <span class="text-checkbox">Remember me</span>
+                </p>
+                <p>Forgot your password?</p>
+            </div>
+
+            <button>Login</button>
+            <div>            
+                <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a> here.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
